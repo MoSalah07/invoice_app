@@ -1,0 +1,71 @@
+.overlay-delete {
+    background-color: rgb(0 0 0 / .45);
+    position: absolute; left: -100px; top: 0; right: 0;
+    height: 100%; width: calc(100% + 100px);
+    z-index: 1000;
+    
+}
+
+.overlay-delete .content {
+    background-color:  var(--bg-dark-li);
+    padding: 2rem; border-radius: 6px;
+    width: 35%;
+}
+
+.overlay-delete .content .text {
+    margin-bottom: 1.5rem;
+}
+
+.overlay-delete .content .text h3 {
+    margin-bottom: 1.25rem; font-size: 1.45rem; letter-spacing: 1px;
+}
+
+.overlay-delete .content .text p {
+    font-size: .85rem; color: var(--text-dark); line-height: 1.7;
+}
+
+.overlay-delete .content .btns-del {
+    display: flex; justify-content: flex-end; align-items: center;
+    gap: 1rem;
+}
+
+.overlay-delete .content .btns-del > div {
+    height: 40px; width: 25%; 
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.overlay-delete .content .btns-del > div button {
+    outline: none; border: none; 
+    background-color: transparent; color: rgb(223, 227, 250);
+    font-weight: bold; font-size: .9rem; text-transform: capitalize;
+    cursor: pointer;
+}
+
+.overlay-delete .content .btns-del .cancel {
+    background: rgb(37, 41, 69);
+}
+
+
+.overlay-delete .content .btns-del .delete {
+    background: rgb(236, 87, 87);
+}
+
+
+/* Mobile */
+
+
+
+.mini-item-invoice.mobile .overlay-delete {
+    position: absolute;
+    left: -100px;
+    width: calc(100% + auto);
+    height: calc(100% + 14vh);
+} 
+
+
+.content.mobile {
+    width: 80%;
+    margin-left: 5rem;
+    padding: 1rem;
+}

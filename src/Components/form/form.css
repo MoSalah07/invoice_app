@@ -1,0 +1,279 @@
+.sub-form {
+    position: absolute; left: -500px; top: 0;
+    z-index: 5;
+    width: 500px;
+    height: 100vh;
+    background-color: var(--bg-dark);
+    transition: all .3s ease-in-out;
+    padding: 2rem;
+    padding-left: .7rem;
+    text-transform: capitalize;
+}
+
+
+
+.sub-form .form { 
+    width: 100%;
+    height: calc(100vh - 4rem);
+}
+
+.sub-form.show {
+    left: 100px;
+}
+
+.sub-form .form .container-form {
+    overflow: auto;
+    height: 100%; width: 100%;
+    padding-inline: 2rem;
+    position: relative;
+}
+
+/* billfrom */
+    /* Global Rules */
+.sub-form h5 {
+    margin-bottom: 1rem;
+    color: var(--bg-dark-btns);
+}
+
+.sub-form label { margin-bottom: .5rem; display: block; font-size: .8rem;} 
+
+.sub-form input {
+    background-color: var(--bg-dark-li);
+    outline: none;  border: 1px solid var(--bg-dark);
+    padding: .65rem;
+    width: 100%;
+    border-radius: .4rem;
+    caret-color: #fff; color: #fff;
+    font-size: .9rem;
+}
+
+.sub-form .container-inputs {
+    display: flex; align-items: center;  gap: 1rem;
+    max-width: 100%;
+}
+    /* End Global Rules */
+
+
+.sub-form .bill-from {
+    padding-top: 2rem;
+}
+
+.sub-form .bill-from > div:first-of-type { margin-bottom: 1rem;}
+
+.sub-form .bill-from .container-inputs > div {
+    flex-basis: 31%;
+}
+
+
+/* Bill To */
+
+.sub-form .bill-to {
+    padding-top: 1.5rem;
+}
+
+.sub-form .bill-to > div:not(:last-of-type) { margin-bottom: 1rem;}
+
+
+/* form-info */
+
+.sub-form .form-info {
+    padding-top: 1.5rem;
+}
+
+.sub-form .form-info .container-date {
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+.sub-form .form-info .container-date > div {
+    flex-basis: 48%;
+}
+
+.sub-form .form-info > div:not(:last-of-type) { margin-bottom: 1rem;}
+
+.sub-form .form-info .container-date .select {
+    width: 100%;
+}
+
+.sub-form .form-info .container-date .select select {
+    width: 100%;
+    padding: .65rem;
+    background-color: var(--bg-dark-li); color: #fff; 
+    outline: none; border: 1px solid var(--bg-dark);
+    text-transform: capitalize;
+}
+
+/* item List */
+
+.sub-form .container-item-list {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.container-item-list .item-list {
+    width: 100%; height: 100%;
+}   
+
+.container-item-list .item-list .title-item-list {
+    margin: 1rem 0 1.5rem;
+}
+
+.container-item-list .item-list .container-box-item-list {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 60px;
+}
+
+.container-item-list .item-list .container-box-item-list:not(:last-of-type) {
+    margin-bottom: 1rem;
+}
+
+.container-box-item-list .box-item-list {
+    height: 100%;
+}
+
+
+.container-box-item-list .box-item-list input {
+    width: 100%;
+}
+
+.container-box-item-list .box-item-list div {
+    color: #f3f3f3;
+    font-weight: bold;
+    margin: 1rem 0 0 .5rem;
+}
+
+
+.sub-form .container-item-list .add-new-item {
+    margin-top: 1rem;
+    background-color: var(--bg-dark-li);
+    border-radius: 3rem;
+    padding: .6rem;
+    display: flex; align-items: center; justify-content: center; gap: .75rem;
+    cursor: pointer;
+}
+
+.sub-form .container-item-list .add-new-item button {
+    background-color: transparent; color: inherit;
+    border: none; outline: none; text-transform: capitalize; 
+    cursor: pointer; font-size: .8rem; font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Width For item list  */
+.container-box-item-list .box-item-list:first-of-type {flex-basis: 35%;}
+
+.container-box-item-list .box-item-list:nth-of-type(2) {flex-basis: 15%;}
+
+.container-box-item-list .box-item-list:nth-of-type(3) { flex-basis: 20%;}
+
+.container-box-item-list .box-item-list:nth-of-type(4) { flex-basis: 15%;}
+
+.container-box-item-list .box-item-list:nth-of-type(5) { 
+    flex-basis: 10%; 
+    display: flex; align-items: center; justify-content: center; cursor: 
+    pointer;
+}
+
+.container-box-item-list .box-item-list:nth-of-type(5) svg { margin-top: 1.5rem;}
+
+/* End Width For item list  */
+
+/* confirm-form */
+    /* Global Rules */
+    .sub-form .confirm-form button {
+        background-color: transparent; color: #fff;
+        border: none; outline: none;
+        font-size: .8rem; font-weight: bold; letter-spacing: .5px;
+        text-transform: capitalize; cursor: pointer;
+        /* Testing height width */
+        height: calc(100% + 1.5rem);
+        width: 100%;
+    }
+
+.sub-form .confirm-form {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background-color: var(--bg-dark);
+}
+
+.sub-form .confirm-form > div:first-of-type {
+    background-color: var(--bg-dark-li);
+}
+
+.sub-form .confirm-form .container-confirm-form {
+    display: flex; align-items: center; gap: .5rem;
+}
+
+.sub-form .confirm-form .container-confirm-form > div:first-of-type {
+    background-color: var(--color-dark-primary);
+
+}
+
+.sub-form .confirm-form .container-confirm-form > div:last-of-type {
+    background-color: var(--bg-dark-btns);
+}
+
+/* Groping */
+.sub-form .confirm-form > div:first-of-type,
+.sub-form .confirm-form .container-confirm-form > div {
+    /* padding: .8rem;
+    border-radius: 3rem;
+    cursor: pointer; */
+    padding: 0.8rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Mobile */
+
+.sub-form.mobile.mobile-sm {
+    width: 95%;
+    left: -95%;
+    padding: .5rem;
+}
+
+.sub-form.mobile .form .container-form.mobile-sm {
+    padding-inline: .7rem;
+}
+
+.sub-form.show.mobile {left: 0px;}
+
+.sub-form.show.mobile,
+.sub-form.mobile {
+    top: 8vh;height: calc(100vh - 8vh);
+    /* For Testing overflow */
+    overflow: auto;
+}
+
+.sub-form.mobile .form {height: calc(100vh - 8rem);}
+
+.sub-form.mobile .form .container-form.mobile-sm .form-info .container-date {flex-direction: column; row-gap: 1rem;}
+.sub-form.mobile .form .container-form.mobile-sm .form-info .container-date > div  {flex-basis: 100%; width: 100%;}
+.sub-form.mobile.mobile-sm .container-box-item-list .box-item-list:first-of-type {flex-basis: 27%;}
+.sub-form.mobile.mobile-sm .container-box-item-list .box-item-list:nth-of-type(2),
+.sub-form.mobile.mobile-sm .container-box-item-list .box-item-list:nth-of-type(3) {flex-basis: 25%;}
+.sub-form.mobile.mobile-sm .container-box-item-list .box-item-list:nth-of-type(5) {flex-basis: 5%;}
+
+
+
+/* Light Theme */
+.sub-form.light {background-color: var(--bg-light); color: var(--text-light);}
+
+  .sub-form.light form label { color: #333;}
+
+  .sub-form.light form input {
+      background-color: transparent;
+      color: #111 !important;
+      caret-color: #111;
+  }
+
+  .sub-form.light .form-info .container-date .select select  {background-color: transparent; color: #333;}
+
+  .sub-form.light .confirm-form, .sub-form.light .container-item-list .add-new-item {background-color: var(--bg-light);}
+
+  .sub-form.light .container-box-item-list .box-item-list.total > div { color: #111 !important;}

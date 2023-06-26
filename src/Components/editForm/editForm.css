@@ -1,0 +1,240 @@
+.edit-form {
+    background-color: var(--bg-dark);
+    position: absolute; top: 0; left: -500px; right: 0;
+    height: 100vh; width: 500px;
+    border-top-right-radius: 2rem;
+    transition: .3s ease-in-out;
+    overflow: auto;
+}
+
+.edit-form.show {
+    left: 100px;
+}
+
+
+.edit-form .container {
+    width: 80%; margin: 2rem auto;
+    text-transform: capitalize;
+}
+
+.edit-form .container .title {
+    margin-bottom: 2rem;
+}
+
+.edit-form .container .title h2.title-edit-form {
+    font-size: 1.6rem; font-weight: 600;
+}
+
+/* Global Ruels  */
+.edit-form h5 {
+    margin-bottom: 1rem;
+    color: var(--bg-dark-btns);
+}
+
+.edit-form label { margin-bottom: .5rem; display: block; font-size: .8rem; transition: .3s ease-in-out;} 
+
+.edit-form input {
+    background-color: var(--bg-dark-li);
+    outline: none;  border: 1px solid var(--bg-dark);
+    padding: .65rem;
+    width: 100%;
+    border-radius: .4rem;
+    caret-color: #fff; color: #fff;
+    font-size: .9rem;
+}
+
+.edit-form  .container-inputs {
+    display: flex; align-items: center;  gap: 1rem;
+    max-width: 100%;
+}
+
+
+/* EditBillFrom */
+
+.edit-form .edit-bill-from > div:first-of-type { margin-bottom: 1rem;}
+
+.edit-form .edit-bill-from .container-inputs > div {
+    flex-basis: 31%;
+}
+
+/* EditBillTo */
+.edit-form .edit-bill-to { padding-top: 1.5rem;}
+.edit-form .edit-bill-to > div:not(:last-of-type) { margin-bottom: 1rem;}
+
+/* EditInfoForm */
+
+.edit-form .edit-bill-info {
+    padding-top: 1.5rem;
+}
+
+.edit-form .edit-bill-info .container-date {
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+.edit-form .edit-bill-info .container-date > div {
+    flex-basis: 48%;
+}
+
+.edit-form .edit-bill-info > div:not(:last-of-type) { margin-bottom: 1rem;}
+
+
+.edit-form .edit-bill-info .container-date .select {
+    width: 100%;
+}
+
+.edit-form .edit-bill-info .container-date .select select {
+    width: 100%;
+    padding: .65rem;
+    background-color: var(--bg-dark-li); color: #fff; 
+    outline: none; border: 1px solid var(--bg-dark);
+    text-transform: capitalize;
+}
+
+/* EditItemlist */
+.edit-item-list {
+    padding-top: 1.5rem;
+    padding-bottom: 6rem;
+}
+
+
+.edit-item-list .container-item-list {
+    width: 100%; height: 100%;
+}
+
+.edit-item-list .item-list .title-item-list {
+    margin: 1rem 0 1.5rem;
+}
+
+.edit-item-list .item-list .add-new-item {
+    margin-top: 1rem;
+    background-color: var(--bg-dark-li);
+    border-radius: 3rem;
+    padding: .6rem;
+    display: flex; align-items: center; justify-content: center; gap: .75rem;
+    cursor: pointer;
+}
+
+.edit-item-list .item-list .add-new-item button {
+    background-color: transparent; color: inherit;
+    border: none; outline: none; text-transform: capitalize; 
+    cursor: pointer; font-size: .8rem; font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Item List Content */
+
+.edit-form .container-box-item-list {
+    display: flex; flex-direction: column; justify-content: center;
+    row-gap: 1rem;
+    padding-top: 1rem;
+}
+
+.edit-form .container-box-item-list .wrapper {
+    display: flex;
+    justify-content: space-between; align-items: center;
+}
+
+
+.edit-form .container-box-item-list .box-item-list input {
+    width: 100%;
+}
+
+.edit-form .container-box-item-list .box-item-list div {
+    color: #f3f3f3;
+    font-weight: bold;
+    margin: 1rem 0 0 .5rem;
+}
+
+
+/* ConfirmEditForm */
+.edit-confirm {
+    background-color: var(--bg-dark);
+    position: fixed;
+    bottom: 0; 
+    width: calc(500px - 5rem); height: 80px;
+    display: flex; align-items: center; justify-content: flex-end;
+    gap: 1rem;
+}
+
+
+.edit-confirm > div {
+    padding-inline: 1rem;
+    border-radius: 2rem; cursor: pointer;
+    height: 50px;
+}
+
+.edit-confirm > div button {
+    background-color: transparent;
+    color: rgb(223, 227, 250);
+    font-size: .85rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none; outline: none;
+}
+
+.edit-confirm > .edit-change-save {
+    background-color: var(--bg-dark-btns);
+}
+
+.edit-confirm > .edit-cancel {
+    background: rgb(37, 41, 69);
+}
+
+
+/* Mobile */
+.edit-form.mobile {
+    top: 8vh;
+    height: calc(100% - 8vh);
+    left: -100%;
+}
+
+.edit-form.mobile.show {
+    left: 0;
+}
+
+.edit-form.mobile {
+    width: 80%;
+}
+
+.edit-form.mobile .edit-confirm {
+    /* Test */
+ width: 68%;
+}
+
+.edit-form.mobile.mobile-sm .edit-bill-info .container-date {
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.edit-form.mobile.mobile-sm .edit-bill-info .container-date > div {
+    width: 100%;
+}
+
+/* .edit-form */
+
+
+/* Theme */
+
+.edit-form.light {
+    background-color: var(--bg-light);
+    color: #111;
+}
+
+.edit-form.light .add-new-item {
+    border: .5px solid #111;
+}
+
+.edit-form.light input,
+.edit-form.light .container-date .select select,
+.edit-form.light .add-new-item,
+.edit-form.light #total {
+    background-color: var(--bg-light);
+    color: #111;
+}
+
+
+
+.edit-form.light .edit-confirm {
+    background-color: var(--bg-light);
+}

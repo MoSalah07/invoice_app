@@ -1,0 +1,375 @@
+.details-invoice {
+    background-color: var(--bg-dark); color: #fff;
+    height: 100vh; width: 100%;
+    transition: background .3s ease-in-out;
+    /* Test OverFlow auto */
+    overflow: auto;
+}
+
+
+.details-invoice .mini-item-invoice {
+    height: 100vh; width: calc(100% - 100px);
+    position: relative; left: 100px;
+    text-transform: capitalize;
+}
+
+.details-invoice .mini-item-invoice .container-mini-item {
+    /* For Test  Max-Width && Padding-top*/
+    max-width: 800px; height: 100%;
+    margin: 0 auto; 
+    padding-top: 7rem;
+}
+
+.details-invoice .mini-item-invoice .container-mini-item .go-back {
+    display: flex; align-items: center; gap: 1rem;  
+    text-transform: none; 
+    position: absolute; top: 3.5rem;
+    transition: .3s ease-in-out;
+    outline: none; border: none;
+}
+
+.details-invoice .mini-item-invoice .container-mini-item .go-back h6 {
+    font-size: 1rem; font-weight: 300;
+}
+
+.details-invoice .mini-item-invoice .container-mini-item .go-back svg {
+    color: var(--bg-dark-btns);
+}
+
+/* Header  */
+
+.mini-item-invoice .container-mini-item .header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 2rem 1rem;
+    background-color: var(--bg-dark-li); border-radius: 6px;
+}
+
+.mini-item-invoice .container-mini-item .header .status {
+    flex-basis: 45%;
+
+} 
+
+.mini-item-invoice .container-mini-item .header .status span {
+    display: inline-block; margin-right: 1rem; font-size: .8rem;
+}
+
+
+.mini-item-invoice .container-mini-item .header .status span:last-of-type {
+    background: rgba(223, 227, 250, 0.06);
+    display: inline-block;
+    height: 40px; line-height: 40px; text-align: center;
+    padding-inline: 1.5rem;
+    border-radius: .25rem;
+    position: relative;
+}
+
+
+.mini-item-invoice .container-mini-item .header .status span:last-of-type::before {
+    content: '';
+    position: absolute; left: .7rem; top: 50%; transform: translateY(-50%);
+    width: 10px; height: 10px;
+    background-color: #fff; border-radius: 50%;
+}
+
+.mini-item-invoice .container-mini-item .header .status span:last-of-type > b {
+    margin-left: .7rem; font-weight: 600; font-size: 14px;
+}
+
+/* Status Classes */
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.pending {    background-color: rgba(255, 143, 0, 0.06);} 
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.pending > b {color: #FF8F00;}
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.pending::before { background-color: #FF8F00;}
+
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.paid {background-color: rgba(51, 214, 159, 0.06);}
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.paid::before { background-color: rgb(51, 214, 159);}
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.paid > b {color:  rgb(51, 214, 159);}
+
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.draft { background-color: rgba(223, 227, 250, 0.06);}
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.draft::before { background-color: rgb(223, 227, 250);}
+.mini-item-invoice .container-mini-item .header .status span:last-of-type.draft > b {color: rgb(223, 227, 250);}
+
+
+
+
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item {
+    display: flex; align-items: center; justify-content: flex-end;
+    gap: 1rem;
+    flex-basis: 45%;
+}
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item .edit {
+        background: rgba(174, 178, 211, 0.973);
+        color: rgb(223, 227, 250); cursor: pointer;
+        padding: .85rem 1.5rem;  border-radius: 2rem;
+}
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item .edit button,
+.mini-item-invoice .container-mini-item .header .btns-mini-item .delete button,
+.mini-item-invoice .container-mini-item .header .btns-mini-item .mark-as-paid button  {
+    border: none; outline: none; background-color: transparent;
+    color: #fff; font-size: .95rem; font-weight: bold; 
+    text-transform: capitalize; cursor: pointer; white-space: nowrap;
+}
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item .edit button {
+    color: rgb(223, 227, 250);
+}
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item .delete {
+    cursor: pointer;
+    padding: .85rem 1.6rem;  border-radius: 3rem;
+    background-color: rgb(236, 87, 87);
+    /* background-color: #FF9797;  */
+}
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item .delete button {
+    
+}
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item .mark-as-paid {
+    background-color: var(--bg-dark-btns);
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    border-radius: 3rem;
+}
+
+
+.mini-item-invoice .container-mini-item .header .btns-mini-item .mark-as-paid.hidden {
+    display: none;
+}
+
+/* End Header */
+
+/* Groping */
+.mini-item-invoice .container-mini-item .header,
+.mini-item-invoice .body { 
+    padding: 1.25rem 1rem;
+    background-color: var(--bg-dark-li); border-radius: 6px;
+    /* Testing Transition */
+    transition: background .1s ease-in-out, color .1s ease-in-out;
+}
+
+/* Start Body */
+
+.mini-item-invoice .body {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.mini-item-invoice .body .top {
+    display: flex; justify-content: space-between;
+}
+
+.mini-item-invoice .body .top > div:first-of-type {
+    flex: 1;
+}
+
+
+
+.mini-item-invoice .body .top > div:first-of-type .serial { 
+    font-size: 1.2rem; font-weight: bold; margin-bottom: .25rem;
+}
+
+.mini-item-invoice .body .top > div:first-of-type .serial b {
+    color: rgb(126, 136, 195);
+}
+
+
+
+.mini-item-invoice .body .top > div:nth-of-type(2).info {
+    display: flex; flex-direction: column; line-height: 1.3rem;
+}
+
+.mini-item-invoice .body .top > div:nth-of-type(2).info span {
+    font-size: .75rem; font-weight: 400;
+    text-align: right;
+}
+
+.mini-item-invoice .body .middle {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    /* Testing padding */
+    /* padding: 2.5rem 0; */
+    padding: .75rem 0 2rem;
+}
+
+/* For All title middle */
+.mini-item-invoice .body .middle > div span { font-size: .85rem; letter-spacing: .5px;}
+
+.mini-item-invoice .body .middle > div:first-of-type > div h3 {
+    font-size: 1.1rem; font-weight: 600; margin-top: .35rem;
+}
+
+.mini-item-invoice  .body .middle > div:nth-of-type(2) { justify-self: center;}
+
+.mini-item-invoice .body .middle > div:first-of-type > div:first-of-type{
+    margin-bottom: 1.5rem;
+}
+
+.mini-item-invoice .body .middle > div:nth-of-type(2) > span:not(:first-of-type) { 
+    display: block;
+    font-size: .8rem;
+}
+
+.mini-item-invoice .body .middle > div:nth-of-type(2) > span:not(:first-of-type, :last-of-type) {
+    margin-bottom: .3rem;
+}
+
+.mini-item-invoice .body .middle > div:nth-of-type(2) > p {
+    padding: .6rem 0 ;
+    font-size: 1.1rem; font-weight: 600;
+}
+
+
+/* Bottom  */
+
+.mini-item-invoice .bottom {
+    padding: 2rem 1rem;
+    background-color: #252945; border-radius: 6px;
+    transition: all .3s ease-in-out;
+}
+
+.mini-item-invoice .bottom .container-bottom {
+    padding-inline: 1rem;
+}
+
+.mini-item-invoice .bottom .container-bottom .boxes {
+    display: grid;
+    /* grid-template-columns: 1fr .5fr .5fr 1fr; */
+    /* align-items: center; justify-content: center; */
+}
+
+.mini-item-invoice .bottom .container-bottom .boxes .box {
+    display: grid;
+    grid-template-columns: 1fr .5fr .5fr 1fr; 
+    justify-content: center;
+}
+
+
+
+.mini-item-invoice .bottom .container-bottom .boxes > div > h6 {
+    font-size: .8rem;
+}
+
+    /* Groping Bottom */
+
+.mini-item-invoice .bottom .container-bottom .boxes .box > span, 
+.mini-item-invoice .bottom .container-bottom .boxes .box > h6,
+.mini-item-invoice .bottom .container-bottom .boxes .box > b {
+    justify-self: center;
+    transition: color .1s ease-in-out;
+    transition-delay: .0s;
+}
+
+.mini-item-invoice .bottom .container-bottom .boxes > div > span, 
+.mini-item-invoice .bottom .container-bottom .boxes > div > b:first-of-type,
+.mini-item-invoice .bottom .container-bottom .boxes > div > h6:first-of-type {
+    margin-bottom: 1.5rem;
+}
+
+/* .mini-item-invoice .bottom .container-bottom .boxes span, 
+.mini-item-invoice .bottom .container-bottom .boxes b { display: block;} */
+
+
+.mini-item-invoice .bottom .container-bottom .amount {
+    background-color: #0C0E16;
+    width: calc(100% + 4rem);
+    position: relative; right: 2rem; top: 2rem;
+    transition: .3s ease-in-out;
+}
+
+.mini-item-invoice .bottom .container-bottom .amount .content {
+    padding: 1rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+/* #373B53 */
+
+/*=================== Mobile =============================== */
+
+
+.details-invoice.mobile .mini-item-invoice {
+    /* Testing Width && margin */
+    left: 0; width: 90%;
+    margin: auto;
+    height: calc(100vh - 8vh);
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm .body .top {
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm .body .top .info {
+    align-items: flex-start; row-gap: .25rem;
+}
+
+.details-invoice.mobile .mini-item-invoice  .body .middle {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm .container-mini-item .header .btns-mini-item {
+    position: absolute; z-index: 0; bottom: -15.5rem; left: 0;
+    background-color: var(--bg-dark-li);
+    width: 100%; gap: 1rem;
+    height: 80px;
+
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm .container-mini-item .header .btns-mini-item.mobile-mini {
+    bottom: -22rem;
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm .container-mini-item .header .btns-mini-item .delete {
+    margin-right: 1rem;
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm  .body .bottom .boxes .box {
+   grid-template-columns: repeat(2, 1fr);
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm  .body .bottom .boxes .box > h6 {
+    justify-self: flex-start;
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm  .body .bottom .boxes .labels,
+.details-invoice.mobile .mini-item-invoice.mobile-sm  .body .bottom .boxes .box > b.hidden{
+    display: none;
+}
+
+.details-invoice.mobile .mini-item-invoice.mobile-sm .header .status {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*
+
+
+*/
+
+
+
+/*======================= Theme Light =================================  */
+.details-invoice.light {
+    background-color: var(--bg-light); color: #333;
+}
+
+.details-invoice.light .mini-item-invoice .container-mini-item .header,
+.details-invoice.light .mini-item-invoice .container-mini-item .body {
+    background-color: #fff; color: #333;
+}
+
+
+.details-invoice.light .mini-item-invoice .container-mini-item .go-back {
+    color: #333;
+}
+
+.details-invoice.light .bottom {
+    background-color: var(--bg-light); color: #333;
+}
+
+.details-invoice.light .container-bottom .amount { 
+    background-color: #373B53;
+    color: #f8f8f8;
+}

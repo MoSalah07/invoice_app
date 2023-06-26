@@ -1,0 +1,119 @@
+.login {
+    background: url('../../Img/login-Grandeur.jpg') center no-repeat;
+    background-size: cover;
+    height: 100%; 
+    width: 100%;
+}
+
+.login .container-login {
+    background-color: #243B55; color: #fff;
+    width: 300px;
+    height: 400px;
+    display: flex; flex-direction: column; align-items: center; 
+    padding: 1rem 1.6rem;
+    text-transform: capitalize;
+    border-radius: 6px;
+}
+
+
+.login .container-login h1 {
+    margin-bottom: 2rem;
+}
+
+.login .container-login form {
+    text-transform: capitalize;
+    width: 100%;
+    height: 100%;
+}
+
+.login .container-login form > div {
+    margin-bottom: 1.35rem;
+    position: relative;
+}
+
+.login .container-login form > div:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.login .container-login form > div:nth-of-type(3) > div {
+    display: flex; align-items: center;
+    height: 20px;
+    margin: .5rem 0;
+    user-select: none;
+}
+.login .container-login form > div:nth-of-type(3) > div:first-of-type { flex-basis: 10%; cursor: pointer;}
+.login .container-login form > div:nth-of-type(3) > div:last-of-type { flex-basis:85%;}
+.login .container-login form > div:nth-of-type(3) > div label { cursor: pointer;}
+.login .container-login form > div:nth-of-type(3) > div span.check-box {
+    background-color: #1C2D43;
+    width: 20px; height:20px;
+}
+
+.login .container-login form > div:nth-of-type(3) > div span.check-box > svg {
+    font-weight: bold; font-size:18px;
+}
+
+
+.login .container-login form > div > label {
+    display: block;
+    margin-bottom: .7rem;
+}
+
+.login .container-login form > div > input {
+    outline: none; border: none;
+    padding: .5rem;
+    width: 100%;
+    background-color: #1C2D43; color: #fff;
+    font-size: 1rem;
+}
+
+.login .container-login form > div > input::placeholder {
+    text-transform: capitalize;
+    font-size: .8rem;
+    letter-spacing: .5px;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.login .container-login form > div > input:focus::placeholder { opacity: 0;}
+
+.login .container-login form > div:last-of-type {
+    align-self: center; justify-self: center;
+    width: 100%;
+}
+
+.login .container-login form > div:last-of-type > button {
+    display: block; width: 100%; margin: 0 auto 1rem;
+    cursor: pointer; outline: none; border: 1px solid transparent;
+    padding: .65rem 0; text-transform: capitalize;  
+    background-color: #1C2D43; color: #fff;
+    font-size: .8rem; font-weight: 600; letter-spacing: .5px;
+    transition: .3s ease-in-out;
+}
+
+.login .container-login form > div:last-of-type > button:hover {
+background-color: #1c2d4336;
+border-color: rgba(221, 221, 221, 0.322);
+}
+
+.login .container-login form > div:last-of-type > a {
+    display: block;
+    margin: auto; text-align: center;
+    width: 100px;
+    cursor: pointer; color: #fff;
+
+}
+
+span.login-icon {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+span.login-icon > svg { font-size: 1.3rem;}

@@ -1,0 +1,19 @@
+.dashboard {
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+
+/* For Test  */
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Theme */
+
+.dashboard.light {
+    background-color: var(--bg-dark-li);
+}

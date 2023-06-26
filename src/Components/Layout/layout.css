@@ -1,0 +1,15 @@
+.layout {
+    position: absolute; inset: 0; z-index: 100;
+    left: 500px;
+    background-color: #0a0b128a;
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: calc(100% - (500px));
+    transition: all .3s ease-in-out;
+}
+
+.layout.hidden {
+    visibility: hidden;
+    opacity: 0;
+}

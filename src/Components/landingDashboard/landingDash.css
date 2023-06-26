@@ -1,0 +1,385 @@
+.landing-dashboard {
+    background-color: var(--bg-dark);
+    position: relative; left: 100px; top: 0; bottom: 0;
+    padding-inline: 2rem;
+    width: calc(100% - (100px));
+    height: 100vh;
+    position: relative;
+    overflow: auto;
+    transition: all .3s ease-in-out;
+        /* Test OverFlow */
+        /* overflow: hidden; */
+}
+
+.landing-dashboard .container-dashboard {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+
+}
+
+/* Component invoice-title */
+
+.landing-dashboard .invoice-title {
+    display: flex; align-items: center; justify-content: space-between;
+}
+
+.landing-dashboard .invoice-title .info {
+    text-transform: capitalize; letter-spacing: .5px;
+}
+
+.landing-dashboard .invoice-title .info h2 {
+    font-size: 2rem;
+}
+
+.landing-dashboard .invoice-title .info p {
+    font-size: .9rem;
+    margin: 1rem 0;
+}
+
+.landing-dashboard .invoice-title .info span {
+    font-size: .8rem; font-weight: bold;
+}
+
+.add-invoices {
+    position: relative;
+    /* z-index: 10; */
+}
+
+
+.invoice-title .select {
+    width: 150px;
+    position: relative;
+}
+
+.invoice-title .container-inv .select::before {
+    content: '\25bc';
+    position: absolute; z-index: 1;
+    right: .5rem; top: 50%; transform: translateY(-50%);
+    width: 20px; height: 20px;
+    pointer-events: none;
+
+}
+
+.invoice-title .container-inv .select select {
+    background-color: var(--bg-dark); color: #fff;
+    outline: none; border: 0 !important; cursor: pointer;
+    text-transform: capitalize; font-size: .9rem;
+    appearance: none; box-shadow: none;
+    -webkit-appearance: none;
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+
+}
+
+.invoice-title .container-inv .select select::-ms-expand { display: none;}
+
+
+.invoice-title .container-inv {
+    gap: 1rem;
+}  
+
+
+
+.invoice-title .container-inv .add-invoices {
+    background-color: var(--bg-dark-btns);
+    padding: .6rem 1rem .6rem .5rem;
+    gap: .5rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.invoice-title .container-inv .add-invoices button {
+    background-color: transparent; color: #fff;
+    border: none; outline: none;
+    text-transform: capitalize; font-weight: 600; font-size: .8rem;
+    letter-spacing: .5px; cursor: pointer;
+}
+
+.invoice-title .container-inv .add-invoices .overlay-add-invoices {
+    background-color:#fff; color: var(--bg-dark);
+    width: 30px; height: 30px;
+    border-radius: 50%;
+}
+
+/* Mobile */
+.landing-dashboard.mobile {
+    left: 0; 
+    width: 100%;
+    padding-inline: .75rem;
+    height: calc(100vh - 8vh);
+}
+
+.landing-dashboard.mobile.mobile-sm {
+    padding-inline: 0;
+}
+
+.landing-dashboard .container-dashboard.mobile {
+    width: 90% !important;
+}
+
+.landing-dashboard .container-dashboard.mobile.mobile-sm {
+    width: 96% !important;
+}
+
+.landing-dashboard.mobile .invoice-title.mobile .info h2 {
+    font-size: 1.3rem; font-weight: bold;
+}
+
+.landing-dashboard.mobile .invoice-title.mobile .info p {
+    font-size: .7rem;
+}
+
+.landing-dashboard.mobile .invoice-title.mobile .container-inv .select {
+    width: 170px;
+}
+
+.landing-dashboard.mobile.mobile-sm .invoice-title.mobile .container-inv .select {
+    /* width: 150px; */
+}
+
+.landing-dashboard.mobile.mobile-sm .invoice-title.mobile .container-inv .select select { font-size: .8rem;}
+
+.landing-dashboard.mobile .invoice-title.mobile .container-inv .add-invoices {
+    /* padding: .6rem 1rem .6rem .5rem; */
+    padding: .25rem;
+    width: 100%;
+    border-radius: 2rem;
+    
+}
+
+.container-dashboard.mobile.mobile-sm .invoice-title.mobile .container-inv .add-invoices {
+    width: 50%;
+}
+
+.container-dashboard.mobile.mobile-sm .invoice-title.mobile .container-inv {
+    flex: 1;
+}
+
+.landing-dashboard.mobile .invoice-title.mobile .container-inv .add-invoices .overlay-add-invoices { 
+    width: 25px; width: 25px;
+}
+
+.landing-dashboard.mobile-lg .container-dashboard {
+    width: auto;
+}
+
+
+
+/*================ InvoiceInfo ============================*/
+.boxes-invoices {
+    padding-top: 4rem;
+}
+
+.boxes-invoices .item-info {
+    background-color: var(--bg-dark-li);
+    padding: 1rem 1.25rem;
+    display: flex; align-items: center;  justify-content: space-between;
+    text-transform: capitalize;  cursor: pointer;
+    border: 1px solid transparent;  border-radius: 6px;
+    transition: all .3s ease-in-out;
+    /* position: relative; */
+
+}
+
+.boxes-invoices .item-info span { white-space: nowrap;}
+
+.boxes-invoices .item-info:hover { border-color: var(--bg-dark-btns);}
+
+.boxes-invoices .item-info:not(:last-of-type) {
+    margin-bottom: 1.1rem;
+}
+
+
+.boxes-invoices .item-info .serial-item-info p { font-weight: bold;}
+
+.boxes-invoices .item-info .serial-item-info p span { color: rgb(126, 136, 195);}
+
+.boxes-invoices .item-info > div {
+    display: flex; justify-content: space-around; align-items: center;
+}
+
+.boxes-invoices .item-info .date-item-info {flex: 1;}
+
+.boxes-invoices .item-info .date-item-info > span { padding-left: 2rem; }
+
+.boxes-invoices .item-info .name-item-info {
+    flex: 1;
+}
+
+.boxes-invoices .item-info .total-item-info {
+    font-weight: bold; font-size: 1.3rem;
+    flex: 1; text-align: center;
+}
+
+.boxes-invoices .item-info .arrow-item-info {
+    margin-left: .6rem;
+}
+
+.boxes-invoices .item-info .wrapper-1,
+.boxes-invoices .item-info .wrapper-2 {
+    row-gap: .5rem;
+}
+
+
+/* State  */
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info {
+    height: 50px;
+    min-width: 120px;
+    border-radius: 6px;
+    font-weight: bold;
+    /* position: relative; */
+    gap: 1rem;
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info > span {
+    transition: .3s ease-in-out;
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info > span:last-of-type {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    display: block;
+    order: -1;
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info.pending {
+    background-color: rgba(255, 143, 0, 0.06);
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info.pending > span:first-of-type {
+    color: #FF8F00; 
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info.pending > span:last-of-type {
+    background-color: #FF8F00;
+}
+
+/* Draft */
+.boxes-invoices .item-info .wrapper-2 .state-item-info.draft {
+    background-color: rgba(223, 227, 250, 0.06);
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info.draft > span:first-of-type {
+   color: rgb(223, 227, 250);
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info.draft > span:last-of-type {
+    background-color: rgb(223, 227, 250);
+}
+
+/* Paid */
+.boxes-invoices .item-info .wrapper-2 .state-item-info.paid {
+    background-color: rgba(51, 214, 159, 0.06);
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info.paid > span:first-of-type {
+    color:  rgb(51, 214, 159);
+}
+
+.boxes-invoices .item-info .wrapper-2 .state-item-info.paid > span:last-of-type {
+    background-color: rgb(51, 214, 159);
+}
+
+/* End State  */
+
+
+.boxes-invoices .item-info > div:first-of-type {flex-basis: 50%;}
+
+.boxes-invoices .item-info > div:last-of-type { flex-basis: 40%;}
+
+.boxes-invoices .item-info .arrow-item-info > svg {
+    color: var(--color-arrow);
+}
+
+
+/*========================= Mobile ===================================*/
+
+.boxes-invoices .item-info.mobile > div {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxes-invoices .item-info.mobile > div:first-of-type {align-items: flex-start;}
+
+
+.boxes-invoices .item-info.mobile  > div:last-of-type { align-items: flex-end;}
+
+.boxes-invoices .item-info.mobile .date-item-info > span { padding-left: 0;}
+
+.boxes-invoices .item-info.mobile  .arrow-item-info {
+    display: none;
+}
+
+.landing-dashboard .invoice-title.mobile.mobile-sm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.landing-dashboard .invoice-title.mobile.mobile-sm .info {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.landing-dashboard .invoice-title.mobile.mobile-sm .info > p {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.landing-dashboard .invoice-title.mobile.mobile-sm .container-inv {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.landing-dashboard .invoice-title.mobile.mobile-sm .info > p { white-space: nowrap;}
+
+.landing-dashboard .container-dashboard.mobile.mobile-sm .boxes-invoices .item-info .wrapper-2 .state-item-info {
+    min-width: 90px;
+    gap: .5rem; font-weight: 600;
+}
+
+/*============ Light Mode ============ */
+
+.dashboard.light .landing-dashboard {
+    background-color: var(--bg-light);
+    color: #111;
+}
+
+.dashboard.light .invoice-title .container-inv .select select {
+    background-color: var(--bg-light);
+    color: #333;
+}
+
+.dashboard.light .boxes-invoices .item-info {
+    background-color: #fff;
+    color: #111;
+}
+
+/* State */
+
+.dashboard.light .boxes-invoices .item-info .wrapper-2 .state-item-info.draft {
+    background: rgba(55, 59, 83, 0.06);
+}
+
+.dashboard.light .boxes-invoices .item-info .wrapper-2 .state-item-info.draft > span:first-of-type {
+    color: rgb(55, 59, 83);
+}
+
+.dashboard.light .boxes-invoices .item-info .wrapper-2 .state-item-info.draft > span:last-of-type {
+    background-color: rgb(55, 59, 83);
+}
+
+
+
+/*     color: rgb(55, 59, 83); */

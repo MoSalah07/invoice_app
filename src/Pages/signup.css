@@ -1,0 +1,107 @@
+.signup {
+    background: url('../../Img/signup-Grandeur.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%; width: 100%;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    row-gap: 1rem;
+}
+
+.signup .container-signup {
+    background-color: #3A6A7A; color: #fff;
+    height: 450px; width: 350px;
+    text-transform: capitalize;
+    border-radius: 6px;
+}
+
+.signup .container-signup h1 {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.signup form {
+    flex-direction: column;
+    padding-inline: 1rem;
+}
+
+.signup form > div {
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    position: relative;
+}
+
+.signup form > div > label {
+    display: block; 
+    margin-bottom: .5rem;
+    white-space: nowrap;
+    font-size: .8rem; font-weight: 600;
+}
+
+.signup form > div > input {
+    width: 200px;
+    outline: none; border: none;
+    background-color: hsl(203, 31%, 28%); color: #fff;
+    padding: .6rem; font-size: .9rem; font-weight: 600;
+}
+
+.signup form button {
+    background-color: hsl(203, 31%, 28%); color: #fff;
+    text-transform: capitalize; font-size: .9rem; font-weight: 600; letter-spacing: .5px;
+    cursor: pointer;
+    outline: none; border: none;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.signup form button::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    background-color: rgb(255 255 255 / .25);
+    height: 100%; width: 50px;
+    transform: skewX(45deg) translatex(180px);
+    transition: .5s ease-in-out;
+}
+
+.signup form button:hover::before {
+    transform: skewX(45deg) translateX(-100px);
+}
+
+.signup a {
+    color: #fff;
+    display: block;
+    text-align: center; font-size: 1rem; font-weight: 600;
+    margin: 2rem auto;
+}
+
+ span.signup-icon {
+    position: absolute; right: .75rem; top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer; user-select: none;
+}
+
+span.signup-icon > svg { font-size: 1.3rem;}
+
+
+/* Mobile */
+
+.signup .container-signup.mobile-sm {
+    width: 95%;
+    height: 600px;
+}
+
+
+.signup .container-signup.mobile-sm form > div {
+    flex-direction: column; row-gap: .5rem;
+}
+
+.signup .container-signup.mobile-sm input {
+    width: 100%;
+}
+
+.signup .container-signup.mobile-sm span.signup-icon {
+    top: 77%;
+}
